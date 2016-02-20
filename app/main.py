@@ -1,6 +1,43 @@
 import bottle
 import os
 
+##tiles: duration, isSnack, isFood, 
+def update_board(response):
+    i = response["width"]
+    j = response["height"]
+    
+    #print(i)
+    #print(j)
+    
+    board = [[{"duration":0,"isSnack":False,"isFood":False} for x in range(i)] for x in range(j)]
+    
+    #add foods
+    if(len(response["food"])>0):
+        for a in len(response["food"]):
+            b = response["food"][a][0]
+            c = response["food"][a][1]
+            board[b][c]["isFood"]=True
+        
+    #print(board)
+    #look at snakes
+    
+    ##for each snake
+    for a in response["snakes"]:
+        slength = len(a["coords"])
+        ##for length of this selected snake
+        z = 0##iterator
+        for b in a["coords"]:
+            
+            x=b[0]
+            y=b[1]
+            ##later, can add the isSnack calculation
+            board[x][y]["duration"] = slength-z
+            z=z+1
+            
+            
+    
+    
+    #return board
 
 @bottle.route('/static/<path:path>')
 def static(path):
@@ -48,6 +85,8 @@ def move():
     snakes = data['snakes']
     print('------------------------- \n')
 
+    update_board(data)
+
     for snake in snakes:
         if snake['id'] == '2e3e0b1d-4537-4c56-87db-010359369132':
             print('our snake is here!')
@@ -60,42 +99,7 @@ def move():
             print(ssatSnakeHead)
             
             #reaching 0 x wall
-            if ssatSnakeHead[0] == 0:
-                #determine where body is 
-    
-                #determine where food is
-
-                #determine where to move
-                
-                return {
-                    'move': 'north',
-                    'taunt': 'SSAT Moves north w,0'
-                    }
-            #reaching w x wall
-            if ssatSnakeHead[0] == boardWidth:
-                
-                return {
-                    'move': 'west',
-                    'taunt': 'SSAT Moves west0'
-                    }
-
-            if ssatSnakeHead[1] == 0:
-                
-                return {
-                    'move': 'east',
-                    'taunt': 'SSAT Moves east'
-                    }
-            #reaching w x wall
-            if ssatSnakeHead[1] == boardHeight:
-                
-                return {
-                    'move': 'south',
-                    'taunt': 'SSAT Moves south'
-                    }
-
             
-                
-            #reaching x wall on boardwidth    
             
 
         #print snake['id']
