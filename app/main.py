@@ -35,14 +35,12 @@ def start():
 def move():
     data = bottle.request.json
     # check snakes
-    snakes = data.snakes
-    for snakes 
 
 
     # TODO: Do things with data
 
     return {
-        'move': 'south',
+        'move': 'north',
         'taunt': 'SSAT Moves north'
     }
 
