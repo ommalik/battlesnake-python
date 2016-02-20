@@ -37,20 +37,16 @@ def start():
 @bottle.post('/move')
 def move():
     data = bottle.request.json
-    # check snakes
+    # check board dimensions
     boardHeight = int(data['height']) -1
     boardWidth = int(data['width']) -1
 
+    #isolate snakes based on ID, starting with ours
 
     ssatSnake = 'Nothing'
 
     snakes = data['snakes']
-
-    for snake in snakes:
-        if snake['id']='2e3e0b1d-4537-4c56-87db-010359369132':
-            print('found it')
-    
-    #print(snake)
+    print(snakes)
 
     #print(data['snakes'])
     print("and we're Moving south, boys!")
