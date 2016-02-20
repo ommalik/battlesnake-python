@@ -49,8 +49,13 @@ def move():
     print('------------------------- \n')
 
     for snake in snakes:
-        print snake['id']
-        print('------------------------- \n')
+        if snake['id'] == '2e3e0b1d-4537-4c56-87db-010359369132':
+            print('our snake is here!')
+            ssatSnake = snake
+            print('/////////////// COORDS /////////////////')
+            print(ssatSnake['coords'])
+        #print snake['id']
+        #print('------------------------- \n')
 
     #print(data['snakes'])
     print("and we're Moving south, boys!")
