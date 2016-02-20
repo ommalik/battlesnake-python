@@ -9,7 +9,7 @@ def static(path):
 
 @bottle.get('/')
 def index():
-    head_url = '%s://%s/static/head.png' % (
+    head_url = 'http://2static.fjcdn.com/pictures/Kappa+ross+20+minutes+into+painting+and+chill+and+he_8db7a0_5730677.jpg' % (
         bottle.request.urlparts.scheme,
         bottle.request.urlparts.netloc
     )
@@ -36,7 +36,7 @@ def move():
     data = bottle.request.json
     # check snakes
     snakes = data.snakes
-
+    for snakes 
 
 
     # TODO: Do things with data
