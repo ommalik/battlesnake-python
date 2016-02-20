@@ -61,24 +61,28 @@ def move():
             
             #reaching 0 x wall
             if ssatSnakeHead[0] == 0:
+                
                 return {
                     'move': 'south',
                     'taunt': 'SSAT Moves south w,0'
                     }
             #reaching w x wall
             if ssatSnakeHead[0] == boardWidth:
+                
                 return {
                     'move': 'south',
                     'taunt': 'SSAT Moves south w,0'
                     }
 
             if ssatSnakeHead[1] == 0:
+                
                 return {
                     'move': 'south',
                     'taunt': 'SSAT Moves south 0,0'
                     }
             #reaching w x wall
             if ssatSnakeHead[1] == boardHeight:
+                
                 return {
                     'move': 'south',
                     'taunt': 'SSAT Moves south 0,Y'
@@ -97,7 +101,7 @@ def move():
     # TODO: Do things with data
 
     return {
-        'move': 'east',
+        'move': 'west',
         'taunt': 'SSAT Moves EAST NEUTRAL'
     }
 
