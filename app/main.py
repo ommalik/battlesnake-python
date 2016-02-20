@@ -46,8 +46,10 @@ def move():
     ssatSnake = 'Nothing'
 
     snakes = data['snakes']
+    print('------------------------- \n')
+
     for snake in snakes:
-        print snake
+        print snake['id']
         print('------------------------- \n')
 
     #print(data['snakes'])
