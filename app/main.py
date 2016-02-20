@@ -26,12 +26,7 @@ def index():
 def start():
     data = bottle.request.json
     # check snakes
-    print('//////////////////////////////////////')
-    print('Board Dimensions')
-
-    print("height:" + data['height'])
-    print("width:" + data['width'])
-    print('//////////////////////////////////////')
+    
     # TODO: Do things with data
 
     return {
@@ -43,6 +38,11 @@ def start():
 def move():
     data = bottle.request.json
     # check snakes
+    print('//////////////////////////////////////')
+    print('Board Dimensions')
+
+    print("height:" + data['height'])
+    print("width:" + data['width'])
     print('//////////////////////////////////////')
 
     print(data['snakes'])
