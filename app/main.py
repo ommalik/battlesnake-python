@@ -41,8 +41,10 @@ def move():
     print('//////////////////////////////////////')
     print('Board Dimensions')
 
-    print("height:" + data['height'])
-    print("width:" + data['width'])
+    print("height:")
+    print( data['height'])
+    print("width:")
+    print( data['width'])
     print('//////////////////////////////////////')
 
     print(data['snakes'])
