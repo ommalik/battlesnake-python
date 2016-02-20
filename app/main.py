@@ -59,24 +59,27 @@ def move():
             print(ssatSnakeHead)
             #reaching x wall on zero
             if ssatSnakeHead[0]== 0:
-
+                print ('x wall 0')
                 return {
                    'move': 'south',
                     'taunt': 'SSAT Moves south'
                 }           
             #reaching x wall on boardwidth    
             if ssatSnakeHead[0] == boardWidth:
+                print ('x wall width')
                 return {
                    'move': 'north',
                     'taunt': 'SSAT Moves north'
                 }           
             #reaching y wall on 0
             if ssatSnakeHead[1] == 0:
+                print ('y wall 0')
                 return {
                    'move': 'south',
                     'taunt': 'SSAT Moves south'
                 }           
             if ssatSnakeHead[1] == boardHeight:
+                print ('y wall width')
                 return {
                    'move': 'north',
                     'taunt': 'SSAT Moves north'
