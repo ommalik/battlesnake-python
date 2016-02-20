@@ -54,6 +54,10 @@ def move():
             ssatSnake = snake
             print('/////////////// COORDS /////////////////')
             print(ssatSnake['coords'])
+
+            ssatSnakeHead = ssatSnake['coords'][0]
+            print(ssatSnakeHead)
+
         #print snake['id']
         #print('------------------------- \n')
 
