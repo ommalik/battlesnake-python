@@ -56,34 +56,35 @@ def move():
             print(ssatSnake['coords'])
 
             ssatSnakeHead = ssatSnake['coords'][0]
+            ssatSnakeBody = ssatSnake['coords'][1]
             print(ssatSnakeHead)
-            #reaching x wall on zero
-            if ssatSnakeHead[0]== 0:
-                print ('x wall 0')
-                return {
-                   'move': 'south',
-                    'taunt': 'SSAT Moves south'
-                }           
+            
+            #reaching 0,0 corner 
+            if ssatSnakeHead[0] == 0  and ssatSnakeHead[1]==0:
+                if ssatSnakeBody[0] == 1:
+                    return {
+                    'move': 'south',
+                    'taunt': 'SSAT Moves south 0,0'
+                    }
+                else:
+                    return {
+                        'move': 'west',
+                        'taunt': 'SSAT Moves west w,0'
+                    }
+            #reaching w,0 wall
+            if ssatSnakeHead[0] == boardWidth  and ssatSnakeHead[1]==0:
+                if ssatSnakeBody[0] == boardWidth:
+                    return {
+                    'move': 'south',
+                    'taunt': 'SSAT Moves south w,0'
+                    }
+                else:
+                    return {
+                        'move': 'west',
+                        'taunt': 'SSAT Moves west w,0'
+                    }
             #reaching x wall on boardwidth    
-            if ssatSnakeHead[0] == boardWidth:
-                print ('x wall width')
-                return {
-                   'move': 'north',
-                    'taunt': 'SSAT Moves north'
-                }           
-            #reaching y wall on 0
-            if ssatSnakeHead[1] == 0:
-                print ('y wall 0')
-                return {
-                   'move': 'south',
-                    'taunt': 'SSAT Moves south'
-                }           
-            if ssatSnakeHead[1] == boardHeight:
-                print ('y wall width')
-                return {
-                   'move': 'north',
-                    'taunt': 'SSAT Moves north'
-                }           
+            
 
         #print snake['id']
         #print('------------------------- \n')
