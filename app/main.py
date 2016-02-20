@@ -17,7 +17,7 @@ def index():
 
 
     return {
-        'color': '#123456',
+        'color': '#000999',
         'head': head_url
     }
 
@@ -37,8 +37,8 @@ def start():
 def move():
     data = bottle.request.json
     # check snakes
-
-    print("Moving south")
+    print(data['snakes'])
+    print("and we're Moving south, boys!")
     # TODO: Do things with data
 
     return {
