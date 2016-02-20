@@ -46,7 +46,9 @@ def move():
     ssatSnake = 'Nothing'
 
     snakes = data['snakes']
-    print(snakes)
+    for snake in snakes:
+        print snake
+        print('------------------------- \n')
 
     #print(data['snakes'])
     print("and we're Moving south, boys!")
