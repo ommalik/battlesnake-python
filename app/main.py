@@ -47,11 +47,8 @@ def move():
     ssatSnake = 'Nothing'
 
     snakes = data['snakes']
-    for snake in snakes:
-        if snake['id']='2e3e0b1d-4537-4c56-87db-010359369132':
-            ssatSnake = snake
-        
-    print(snake)
+    
+    #print(snake)
 
     #print(data['snakes'])
     print("and we're Moving south, boys!")
