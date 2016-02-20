@@ -14,6 +14,8 @@ def index():
         bottle.request.urlparts.netloc
     )
 
+
+
     return {
         'color': '#123456',
         'head': head_url
@@ -36,12 +38,12 @@ def move():
     data = bottle.request.json
     # check snakes
 
-
+    print("Moving south")
     # TODO: Do things with data
 
     return {
         'move': 'south',
-        'taunt': 'SSAT Moves north'
+        'taunt': 'SSAT Moves south'
     }
 
 
