@@ -25,7 +25,13 @@ def index():
 @bottle.post('/start')
 def start():
     data = bottle.request.json
+    # check snakes
+    print('//////////////////////////////////////')
+    print('Board Dimensions')
 
+    print("height:" + data['height'])
+    print("width:" + data['width'])
+    print('//////////////////////////////////////')
     # TODO: Do things with data
 
     return {
@@ -37,6 +43,8 @@ def start():
 def move():
     data = bottle.request.json
     # check snakes
+    print('//////////////////////////////////////')
+
     print(data['snakes'])
     print("and we're Moving south, boys!")
     # TODO: Do things with data
