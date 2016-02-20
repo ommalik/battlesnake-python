@@ -74,7 +74,7 @@ def move():
             if ssatSnakeHead[0] == boardWidth:
                 
                 return {
-                    'move': 'south',
+                    'move': 'west',
                     'taunt': 'SSAT Moves south w,0'
                     }
 
