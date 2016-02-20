@@ -38,14 +38,14 @@ def start():
 def move():
     data = bottle.request.json
     # check snakes
-    print('//////////////////////////////////////')
-    print('Board Dimensions')
+    boardHeight = int(data['height']) -1
+    boardWidth = int(data['width']) -1
 
-    print("height:")
-    print( data['height'])
-    print("width:")
-    print( data['width'])
-    print('//////////////////////////////////////')
+    print(boardWidth)
+    print(boardHeight)
+    
+    
+    
 
     print(data['snakes'])
     print("and we're Moving south, boys!")
