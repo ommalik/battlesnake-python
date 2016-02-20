@@ -41,12 +41,14 @@ def move():
     boardHeight = int(data['height']) -1
     boardWidth = int(data['width']) -1
 
-    print(boardWidth)
-    print(boardHeight)
 
     ssatSnake = 'Nothing'
 
     snakes = data['snakes']
+
+    for snake in snakes:
+        if snake['id']='2e3e0b1d-4537-4c56-87db-010359369132':
+            print('found it')
     
     #print(snake)
 
