@@ -57,9 +57,7 @@ def move():
 
             ssatSnakeHead = ssatSnake['coords'][0]
             print(ssatSnakeHead)
-            for [x,y] in ssatSnakeHead:
-                print x
-                print y
+            
 
         #print snake['id']
         #print('------------------------- \n')
