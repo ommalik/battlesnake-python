@@ -17,7 +17,7 @@ def index():
 
 
     return {
-        'color': '#000999',
+        'color': '#FFCCFF',
         'head': head_url
     }
 
@@ -57,6 +57,9 @@ def move():
 
             ssatSnakeHead = ssatSnake['coords'][0]
             print(ssatSnakeHead)
+            for [x,y] in ssatSnakeHead:
+                print x
+                print y
 
         #print snake['id']
         #print('------------------------- \n')
