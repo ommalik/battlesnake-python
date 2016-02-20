@@ -66,30 +66,31 @@ def move():
                 #determine where food is
 
                 #determine where to move
+                
                 return {
-                    'move': 'south',
-                    'taunt': 'SSAT Moves south w,0'
+                    'move': 'north',
+                    'taunt': 'SSAT Moves north w,0'
                     }
             #reaching w x wall
             if ssatSnakeHead[0] == boardWidth:
                 
                 return {
                     'move': 'west',
-                    'taunt': 'SSAT Moves south w,0'
+                    'taunt': 'SSAT Moves west0'
                     }
 
             if ssatSnakeHead[1] == 0:
                 
                 return {
                     'move': 'east',
-                    'taunt': 'SSAT Moves south 0,0'
+                    'taunt': 'SSAT Moves east'
                     }
             #reaching w x wall
             if ssatSnakeHead[1] == boardHeight:
                 
                 return {
-                    'move': 'west',
-                    'taunt': 'SSAT Moves south 0,Y'
+                    'move': 'south',
+                    'taunt': 'SSAT Moves south'
                     }
 
             
