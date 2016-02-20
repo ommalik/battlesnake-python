@@ -62,7 +62,7 @@ def move():
             #reaching 0 x wall
             if ssatSnakeHead[0] == 0:
                 #determine where body is 
-                if ssatSnakeHead[0]
+    
                 #determine where food is
 
                 #determine where to move
