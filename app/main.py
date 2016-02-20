@@ -9,7 +9,7 @@ def static(path):
 
 @bottle.get('/')
 def index():
-    head_url = 'http://2static.fjcdn.com/pictures/Kappa+ross+20+minutes+into+painting+and+chill+and+he_8db7a0_5730677.jpg' % (
+    head_url = '%s://%s/static/head.png' % (
         bottle.request.urlparts.scheme,
         bottle.request.urlparts.netloc
     )
@@ -40,7 +40,7 @@ def move():
     # TODO: Do things with data
 
     return {
-        'move': 'north',
+        'move': 'south',
         'taunt': 'SSAT Moves north'
     }
 
