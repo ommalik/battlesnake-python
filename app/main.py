@@ -34,11 +34,15 @@ def start():
 @bottle.post('/move')
 def move():
     data = bottle.request.json
+    # check snakes
+    snakes = data.snakes
+
+
 
     # TODO: Do things with data
 
     return {
-        'move': 'north',
+        'move': 'south',
         'taunt': 'SSAT Moves north'
     }
 
