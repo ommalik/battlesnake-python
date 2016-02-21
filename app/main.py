@@ -105,8 +105,11 @@ def move():
     foods = data['food']
     
     for food in foods:
-        print(food)
+        xMovesToFood = ssatSnakeHead[0]-food[0]
+        yMovesToFood = ssatSnakeHead[1]-food[1]
+        movesToFoods.append(xMovesToFood+yMovesToFood)
 
+    print(movesToFoods)
 
     #print(movesToFoods)
     '''
