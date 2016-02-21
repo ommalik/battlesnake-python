@@ -123,30 +123,7 @@ def move():
 
             print('For food THEY have to move '+theirMovesToFoods)
             
-    for food in foods:
-        if movesToFoods(index(food)) < theirMovesToFoods(index(food)):
-            if ssatSnakeHead[0] != food[0]:
-                if ssatSnakeHead[0] > food[0]:
-                    return {
-                       'move': 'west',
-                        'taunt': 'SSAT Moves west'
-                    }
-                else:
-                    return {
-                        'move': 'east',
-                        'taunt': 'SSAT Moves EAST food'
-                    }
-            elif ssatSnakeHead[1] != food[1]:
-                if ssatSnakeHead[1] > food[1]:
-                    return {
-                       'move': 'north',
-                        'taunt': 'SSAT Moves north'
-                    }
-                else:
-                    return {
-                        'move': 'south',
-                        'taunt': 'SSAT Moves south food'
-                    }
+    
 
     #print(movesToFoods)
     '''
