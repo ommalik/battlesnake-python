@@ -130,10 +130,10 @@ def move():
     movesToFoods = map(int, movesToFoods)
     theirMovesToFoods = map(int, theirMovesToFoods)
     print('mine')
-    print(movesToFoods)
+    
 
     print('theirMovesToFoods')
-    print(theirMovesToFoods)
+    
 
     #myMin = min(movesToFoods)
     #tMin = min(theirMovesToFoods)
