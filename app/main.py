@@ -101,15 +101,14 @@ def move():
             #reaching 0 x wall
             
     movesToFoods =[] 
+    
     foods = data['food']
     
     for food in foods:
-        xMovesToFood = ssatSnakeHead[0]-food[0]
-        yMovesToFood = ssatSnakeHead[1]-food[1]
-        movesToFoods.append(xMovesToFood+yMovesToFood)
+        print(food)
 
 
-    print(movesToFoods)
+    #print(movesToFoods)
     '''
     ssatSnakeHead:
         if (ssatSnakeBody[0]+1 == ssatSnakeHead[0]+1):
