@@ -126,6 +126,7 @@ def move():
             print('For food THEY have to move ')
             print(theirMovesToFoods)
     j = 0    
+    '''
     movesToFoods = map(int, movesToFoods)
     theirMovesToFoods = map(int, theirMovesToFoods)
 
@@ -134,13 +135,14 @@ def move():
 
     print('THEIR min')
     print(min(theirMovesToFoods))
+    '''
     for food in foods:
 
         print(movesToFoods[j])
         print(theirMovesToFoods[j])
 
         
-        if movesToFoods[j] <= theirMovesToFoods[j]:
+        if movesToFoods[j] < theirMovesToFoods[j]:
             if ssatSnakeHead[0] != food[0]:
                 if ssatSnakeHead[0] > food[0]:
                     return {
