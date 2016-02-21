@@ -127,7 +127,9 @@ def move():
             print(theirMovesToFoods)
             
     for food in foods:
-        if movesToFoods.index(food) < theirMovesToFoods.index(food):
+        print(movesToFoods.index(food))
+        print(theirMovesToFoods.index(food))
+        '''if movesToFoods.index(food) < theirMovesToFoods.index(food):
             if ssatSnakeHead[0] != food[0]:
                 if ssatSnakeHead[0] > food[0]:
                     return {
@@ -150,7 +152,7 @@ def move():
                         'move': 'south',
                         'taunt': 'SSAT Moves south food'
                     }
-
+            '''
     #print(movesToFoods)
     '''
     ssatSnakeHead:
