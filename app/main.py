@@ -121,10 +121,7 @@ def move():
                 tyMovesToFood = otherSnakeHead[1]-food[1]
                 theirMovesToFoods.append(abs(txMovesToFood+tyMovesToFood))
 
-            print('For food THEY have to move '+theirMovesToFoods)
             
-    
-
     #print(movesToFoods)
     '''
     ssatSnakeHead:
