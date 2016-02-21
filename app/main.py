@@ -126,6 +126,14 @@ def move():
             print('For food THEY have to move ')
             print(theirMovesToFoods)
     j = 0    
+    movesToFoods = map(int, movesToFoods)
+    theirMovesToFoods = map(int, theirMovesToFoods)
+
+    print('MY min')
+    print(min(movesToFoods))
+
+    print('THEIR min')
+    print(min(theirMovesToFoods))
     for food in foods:
 
         print(movesToFoods[j])
