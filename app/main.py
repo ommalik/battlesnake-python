@@ -109,19 +109,45 @@ def move():
         yMovesToFood = ssatSnakeHead[1]-food[1]
         movesToFoods.append(abs(xMovesToFood+yMovesToFood))
 
-    print('For food we have to move ')
-    print(movesToFoods)
+    print('For food we have to move '+str(movesToFoods))
 
     for snake in snakes:
         if snake['id'] != '2e3e0b1d-4537-4c56-87db-010359369132':
             
+
             otherSnakeHead = snake['coords'][0]
             for food in foods:
                 txMovesToFood = otherSnakeHead[0]-food[0]
                 tyMovesToFood = otherSnakeHead[1]-food[1]
                 theirMovesToFoods.append(abs(txMovesToFood+tyMovesToFood))
 
+            print('For food THEY have to move '+str(theirMovesToFoods))
             
+    for food in foods:
+        if movesToFoods(index(food)) < theirMovesToFoods(index(food)):
+            if ssatSnakeHead[0] != food[0]:
+                if ssatSnakeHead[0] > food[0]:
+                    return {
+                       'move': 'west',
+                        'taunt': 'SSAT Moves west'
+                    }
+                else:
+                    return {
+                        'move': 'east',
+                        'taunt': 'SSAT Moves EAST food'
+                    }
+            elif ssatSnakeHead[1] != food[1]:
+                if ssatSnakeHead[1] > food[1]:
+                    return {
+                       'move': 'north',
+                        'taunt': 'SSAT Moves north'
+                    }
+                else:
+                    return {
+                        'move': 'south',
+                        'taunt': 'SSAT Moves south food'
+                    }
+
     #print(movesToFoods)
     '''
     ssatSnakeHead:
