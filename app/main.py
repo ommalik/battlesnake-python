@@ -125,16 +125,25 @@ def move():
 
             print('For food THEY have to move ')
             print(theirMovesToFoods)
-    j = 0    
+    j = 0
+    
+    myMin = min(movesToFoods)
+    tMin = min(theirMovesToFoods)
+
+    if myMin < tMin:
+        foods.index(min(movesToFoods))
+        print(foods.index(min(movesToFoods)))
+
     for food in foods:
 
-        print(movesToFoods[j])
-        print(theirMovesToFoods[j])
+        print('OUR moves to food ' + movesToFoods[j])
+        print('THEIR moves to '+theirMovesToFoods[j])
 
         
         if movesToFoods[j] <= theirMovesToFoods[j]:
             if ssatSnakeHead[0] != food[0]:
                 if ssatSnakeHead[0] > food[0]:
+                    
                     return {
                        'move': 'west',
                         'taunt': 'SSAT Moves west'
