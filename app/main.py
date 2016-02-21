@@ -140,7 +140,7 @@ def move():
                        'move': 'west',
                         'taunt': 'SSAT Moves west'
                     }
-                else:
+                elif (ssatSnakeHead[0]+1 != ssatSnakeBody[0]):
                     return {
                         'move': 'east',
                         'taunt': 'SSAT Moves EAST food'
@@ -151,7 +151,7 @@ def move():
                        'move': 'north',
                         'taunt': 'SSAT Moves north'
                     }
-                else:
+                elif (ssatSnakeHead[1]+1 != ssatSnakeBody[1]):
                     return {
                         'move': 'south',
                         'taunt': 'SSAT Moves south food'
