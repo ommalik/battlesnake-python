@@ -135,7 +135,7 @@ def move():
         print('shit yeah!')
     else:
         print('bide yo time')
-    '''
+        '''
     for food in foods:
 
         print('OUR moves to food ' + movesToFoods[j])
@@ -168,7 +168,7 @@ def move():
                     }
 
         j = j+1
-            
+     '''       
     #print(movesToFoods)
     '''
     ssatSnakeHead:
