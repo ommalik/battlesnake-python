@@ -131,9 +131,11 @@ def move():
     tMin = min(theirMovesToFoods)
 
     if myMin < tMin:
-        foods.index(min(movesToFoods))
-        print(foods.index(min(movesToFoods)))
-
+        
+        print('shit yeah!')
+    else:
+        print('bide yo time')
+    '''
     for food in foods:
 
         print('OUR moves to food ' + movesToFoods[j])
