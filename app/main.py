@@ -129,15 +129,20 @@ def move():
 
     movesToFoods = map(int, movesToFoods)
     theirMovesToFoods = map(int, theirMovesToFoods)
-    
-    myMin = min(movesToFoods)
-    tMin = min(theirMovesToFoods)
+    print('mine')
+    print(movesToFoods)
 
-    if myMin < tMin:
+    print('theirMovesToFoods')
+    print(theirMovesToFoods)
+
+    #myMin = min(movesToFoods)
+    #tMin = min(theirMovesToFoods)
+
+    #if myMin < tMin:
         
-        print('shit yeah!')
-    else:
-        print('bide yo time')
+     #   print('shit yeah!')
+    #else:
+    #    print('bide yo time')
         '''
     for food in foods:
 
