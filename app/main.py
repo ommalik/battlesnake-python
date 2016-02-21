@@ -109,7 +109,8 @@ def move():
         yMovesToFood = ssatSnakeHead[1]-food[1]
         movesToFoods.append(abs(xMovesToFood+yMovesToFood))
 
-    print('For food we have to move '+str(movesToFoods))
+    print('For food we have to move ')
+    print(movesToFoods)
 
     for snake in snakes:
         if snake['id'] != '2e3e0b1d-4537-4c56-87db-010359369132':
@@ -121,7 +122,8 @@ def move():
                 tyMovesToFood = otherSnakeHead[1]-food[1]
                 theirMovesToFoods.append(abs(txMovesToFood+tyMovesToFood))
 
-            print('For food THEY have to move '+str(theirMovesToFoods))
+            print('For food THEY have to move ')
+            print(theirMovesToFoods)
             
     for food in foods:
         if movesToFoods(index(food)) < theirMovesToFoods(index(food)):
