@@ -1,6 +1,6 @@
 import bottle
 import os
-
+import math
 '''##tiles: duration, isSnack, isFood, isOtherSnake
 def update_board(response):
     i = response["width"]
@@ -107,7 +107,7 @@ def move():
     for food in foods:
         xMovesToFood = ssatSnakeHead[0]-food[0]
         yMovesToFood = ssatSnakeHead[1]-food[1]
-        movesToFoods.append(xMovesToFood+yMovesToFood)
+        movesToFoods.append(abs(xMovesToFood+yMovesToFood))
 
     print(movesToFoods)
 
