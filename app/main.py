@@ -135,7 +135,7 @@ def move():
         
         if movesToFoods[j] < theirMovesToFoods[j]:
             if ssatSnakeHead[0] != food[0]:
-                if ssatSnakeHead[0] > food[0] :
+                if ssatSnakeHead[0] > food[0] and (ssatSnakeHead[0]-1 != ssatSnakeBody[0]):
                     return {
                        'move': 'west',
                         'taunt': 'SSAT Moves west'
@@ -146,7 +146,7 @@ def move():
                         'taunt': 'SSAT Moves EAST food'
                     }
             elif ssatSnakeHead[1] != food[1]:
-                if ssatSnakeHead[1] > food[1]:
+                if ssatSnakeHead[1] > food[1]  and (ssatSnakeHead[1]-1 != ssatSnakeBody[1]):
                     return {
                        'move': 'north',
                         'taunt': 'SSAT Moves north'
