@@ -101,13 +101,14 @@ def move():
             #reaching 0 x wall
             
     movesToFoods =[] 
+    theirMovesToFoods = []
     
     foods = data['food']
     
     for food in foods:
         xMovesToFood = ssatSnakeHead[0]-food[0]
         yMovesToFood = ssatSnakeHead[1]-food[1]
-        movesToFoods.append(abs(xMovesToFood+yMovesToFood))
+        movesToFoods.append(abs(xMovesToFood)+abs(yMovesToFood))
 
     print('For food we have to move ')
     print(movesToFoods)
@@ -120,7 +121,7 @@ def move():
             for food in foods:
                 txMovesToFood = otherSnakeHead[0]-food[0]
                 tyMovesToFood = otherSnakeHead[1]-food[1]
-                theirMovesToFoods.append(abs(txMovesToFood+tyMovesToFood))
+                theirMovesToFoods.append(abs(txMovesToFood)+abs(tyMovesToFood))
 
             print('For food THEY have to move ')
             print(theirMovesToFoods)
