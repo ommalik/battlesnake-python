@@ -109,7 +109,7 @@ def move():
         movesToFoods.append(xMovesToFood+yMovesToFood)
 
 
-    print('closest food is '+min(movesToFoods)+' moves away. COORDS are '+foods[index(min(movesToFoods))])
+    
     '''
     ssatSnakeHead:
         if (ssatSnakeBody[0]+1 == ssatSnakeHead[0]+1):
