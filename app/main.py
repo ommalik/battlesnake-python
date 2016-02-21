@@ -1,7 +1,7 @@
 import bottle
 import os
 
-##tiles: duration, isSnack, isFood, 
+##tiles: duration, isSnack, isFood, isOtherSnake
 def update_board(response):
     i = response["width"]
     j = response["height"]
@@ -100,8 +100,25 @@ def move():
             
             #reaching 0 x wall
             
-            
+    movesToFoods =[] 
+    foods = data['food']
+    
+    for food in foods:
+        xMovesToFood = ssatSnakeHead[0]-food[0]
+        yMovesToFood = ssatSnakeHead[1]-food[1]
+        movesToFoods.append(xMovesToFood+yMovesToFood)
 
+
+    print('closest food is '+min(movesToFoods)+' moves away. COORDS are '+foods[index(min(movesToFoods))])
+    '''
+    ssatSnakeHead:
+        if (ssatSnakeBody[0]+1 == ssatSnakeHead[0]+1):
+
+        return {
+            'move': 'north',
+            'taunt': 'SSAT Moves EAST NEUTRAL'
+        }
+    '''
         #print snake['id']
         #print('------------------------- \n')
 
