@@ -126,6 +126,9 @@ def move():
             print('For food THEY have to move ')
             print(theirMovesToFoods)
     j = 0
+
+    movesToFoods = map(int, movesToFoods)
+    theirMovesToFoods = map(int, theirMovesToFoods)
     
     myMin = min(movesToFoods)
     tMin = min(theirMovesToFoods)
