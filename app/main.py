@@ -109,7 +109,7 @@ def move():
         movesToFoods.append(xMovesToFood+yMovesToFood)
 
 
-    
+    print(movesToFoods)
     '''
     ssatSnakeHead:
         if (ssatSnakeBody[0]+1 == ssatSnakeHead[0]+1):
