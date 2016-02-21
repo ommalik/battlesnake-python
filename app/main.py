@@ -125,10 +125,13 @@ def move():
 
             print('For food THEY have to move ')
             print(theirMovesToFoods)
-            
+    j = 0    
     for food in foods:
-        print(movesToFoods.index(food))
-        print(theirMovesToFoods.index(food))
+
+        print(movesToFoods[j])
+        print(theirMovesToFoods[j])
+
+        j++
         '''if movesToFoods.index(food) < theirMovesToFoods.index(food):
             if ssatSnakeHead[0] != food[0]:
                 if ssatSnakeHead[0] > food[0]:
